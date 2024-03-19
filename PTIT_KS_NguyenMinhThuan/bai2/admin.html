@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Management</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    @media (min-width: 992px) {
+        #projectTable th:nth-child(3),
+        #projectTable td:nth-child(3) {
+            display: table-cell;
+        }
+    }
+
+    @media (max-width: 991px) {
+        #projectTable th:nth-child(2),
+        #projectTable td:nth-child(2) {
+            display: table-cell;
+        }
+    }
+
+    #projectTable tbody tr:nth-child(odd) {
+        background-color: #e6e6e6;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>My Projects</h1>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-at"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Project Name" id="projectName">
+            </div>
+        </div>
+        <div class="col">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-at"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Image URL" id="imageUrl">
+            </div>
+        </div>
+        <div class="col">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-at"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Link" id="link">
+            </div>
+        </div>
+        <div class="col">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-at"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Tags (Ex: React, Angular)" id="tags">
+            </div>
+        </div>
+        <div class="col">
+            <button class="btn btn-primary" onclick="addProject()">+ New Project</button>
+        </div>
+    </div>
+
+    <table id="projectTable" class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Project Name</th>
+                <th>Image URL</th>
+                <th>Link</th>
+                <th>Tags</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="projectTableBody">
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="./admin.js"></script>
+</body>
+</html>
