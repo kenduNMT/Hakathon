@@ -1,0 +1,73 @@
+/* src/TodoList.css */
+.todo-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MuiTextField-root {
+    width: calc(100% - 100px);
+    margin-right: 10px;
+}
+
+.MuiButton-root {
+    height: 60px;
+    background-color: #3791e5;
+    color: white;
+}
+
+.MuiButton-root:hover {
+    background-color: #303f9f;
+}
+
+.MuiButton-root:active {
+    background-color: #3791e5;
+}
+
+.MuiButton-root:focus {
+    background-color: #3791e5;
+}
+
+.todo-footer {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.edit-icon {
+    color: orange;
+}
+
+.delete-icon {
+    color: red;
+}
+
+/* Đổi màu border và box-shadow của input khi focus */
+.MuiTextField-root .MuiInputBase-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #3791e5;
+}
+
+.MuiTextField-root .MuiInputBase-root.Mui-focused .MuiInput-underline:after {
+    border-bottom-color: #3791e5;
+}
+
+.MuiTextField-root .MuiInputBase-root.Mui-focused {
+    box-shadow: 0 0 5px rgb(59, 157, 255);
+    /* màu xanh da trời nhạt */
+}
